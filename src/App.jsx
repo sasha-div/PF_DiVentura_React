@@ -6,30 +6,13 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Conocenos from './components/Conocenos/Conocenos';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
-import { useState } from 'react';
-import { CartContext } from './context/CartContext';
+import { CartProvider } from './context/CartContext';
+import { Carrito } from './components/Carrito/Carrito';
 
 function App() {
 
-  const [carrito, setCarrito] = useState([]);
-
-
-  const agregarAlCarrito = (product, quantity) => {
-    const productAgregado = { ...product, quantity }
-
-    const nuevoCarrito = [...carrito];
-    const enElCarrito = nuevoCarrito.find((product) => product.id === productAgregado.id);
-
-    if (enElCarrito) {
-      enElCarrito.quantity += quantity;
-    } else {
-      nuevoCarrito.push(productAgregado);
-    }
-    setCarrito(nuevoCarrito);
-  }
-
   return (
-    <CartContext.Provider value={{ carrito, agregarAlCarrito }}>
+    <CartProvider>
 
       <BrowserRouter>
         <NavBar />
@@ -40,12 +23,15 @@ function App() {
           <Route path='/product/:platform' element={<ItemListContainer />} />
           <Route path='/products/:id' element={<ItemDetailContainer />} />
           <Route path='/conocenos' element={<Conocenos />} />
+          <Route path='/carrito' element={<Carrito />} />
           <Route path='*' element={<h1>No se encontró la página que buscas.</h1>} />
         </Routes>
+
         <Footer />
+
       </BrowserRouter>
 
-    </CartContext.Provider>
+    </CartProvider>
   );
 }
 

@@ -26,10 +26,9 @@ const NavBar = () => {
                         <Link to="/product/Switch" className='nav-link'>SWITCH</Link>
                         <Link to="/product/Xbox" className='nav-link'>XBOX</Link>
                         <Link to="/conocenos" className='nav-link'>Conócenos</Link>
+                        <CartWidget />
                     </Nav>
-                    <CartWidget />
                 </Container>
-
             </Navbar>
         </div>
     )
