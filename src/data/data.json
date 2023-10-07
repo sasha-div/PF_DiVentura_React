@@ -2,81 +2,81 @@
     {
         "id": 1,
         "title": "Elden Ring",
-        "genre": "Acción",
+        "genre": "Rol",
         "platform": "PS4",
         "img": "https://i.ibb.co/ZSKJ2kX/product-001.webp",
         "price": 30000,
-        "description": "Suspendisse potenti. In eleifend quam a odio.",
+        "description": "Elden Ring es un juego de rol de acción en tercera persona que combina elementos de juegos anteriores de FromSoftware, como Dark Souls y Bloodborne. El juego presenta un mundo abierto que los jugadores pueden explorar libremente, y los jugadores pueden elegir su propio estilo de juego, utilizando una variedad de armas, armaduras y habilidades.",
         "stock": 10
     },
     {
         "id": 2,
         "title": "The Last of Us: Part II",
-        "genre": "Aventura",
+        "genre": "Acción, Aventura",
         "platform": "PS4",
         "img": "https://i.ibb.co/9VPmHvf/product-002.webp",
         "price": 30000,
-        "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
+        "description": "La historia del juego se desarrolla cinco años después de los eventos del primer juego. Ellie, la protagonista, emprende un viaje de venganza. Durante su viaje, Ellie se enfrentará a una serie de desafíos físicos y emocionales que la obligarán a cuestionar su propia humanidad.",
         "stock": 10
     },
     {
         "id": 3,
         "title": "Horizon II: Forbidden West",
-        "genre": "Deportes",
+        "genre": "Acción, Rol",
         "platform": "PS4",
         "img": "https://i.ibb.co/sPXZKPJ/product-003.webp",
         "price": 30000,
-        "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "description": "La historia del juego se desarrolla seis meses después de los eventos del primer juego. Aloy, la protagonista, viaja al oeste de los Estados Unidos para investigar una misteriosa plaga que está devastando el mundo. Durante su viaje, Aloy se enfrentará a una serie de nuevos desafíos, incluido un grupo de humanos hostiles y una nueva amenaza mecánica.",
         "stock": 10
     },
     {
         "id": 4,
         "title": "The Legend of Zelga: Breath of the Wild",
-        "genre": "Acción",
+        "genre": "Acción, Aventura",
         "platform": "Switch",
         "img": "https://i.ibb.co/zJq5jtb/product-004.webp",
         "price": 30000,
-        "description": "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+        "description": "El juego se desarrolla en el reino de Hyrule, que ha sido devastado por Ganon, un malvado ser que ha despertado de su letargo. Link, el protagonista, despierta 100 años después de la derrota de Ganon y debe viajar por Hyrule para recuperar sus recuerdos y derrotar a Ganon una vez más.",
         "stock": 10
     },
     {
         "id": 5,
         "title": "Mario Kart 8 Deluxe",
-        "genre": "Aventura",
+        "genre": "Carreras",
         "platform": "Switch",
         "img": "https://i.ibb.co/L0ZpLMV/product-005.webp",
         "price": 30000,
-        "description": "In eleifend quam a odio. In hac habitasse platea dictumst.",
+        "description": "El juego presenta 48 pistas de carreras, incluidas 12 nuevas pistas que se agregaron en la versión Deluxe. Los jugadores pueden elegir entre 42 personajes diferentes, incluidos todos los personajes de la versión original de Wii U, así como nuevos personajes como Inkling Girl, Inkling Boy, King Boo y Dry Bones.",
         "stock": 10
     },
     {
         "id": 6,
         "title": "Tomb Raider: Definitive Edition",
-        "genre": "Deportes",
+        "genre": "Acción, Aventura",
         "platform": "Xbox",
         "img": "https://i.ibb.co/gMV3wYY/product-006.webp",
         "price": 30000,
-        "description": "Maecenas ut massa quis augue luctus tincidunt.",
+        "description": "El juego sigue a Lara Croft, una joven arqueóloga que queda varada en una misteriosa isla después de que su barco naufraga. Lara debe usar sus habilidades de supervivencia y sus conocimientos arqueológicos para explorar la isla, resolver acertijos y luchar contra enemigos para escapar.",
         "stock": 10
     },
     {
         "id": 7,
         "title": "It Takes Two",
-        "genre": "Acción",
+        "genre": "Acción, Aventura",
         "platform": "Xbox",
         "img": "https://i.ibb.co/WBJfNjD/product-007.webp",
         "price": 30000,
-        "description": "Praesent blandit.",
+        "description": "El juego sigue a Cody y May, una pareja casada que ha decidido divorciarse. Su hija, Rose, está desconsolada y desea que sus padres vuelvan a estar juntos. Una noche, Rose hace un deseo con un par de muñecas y Cody y May son mágicamente transformados en las muñecas. Ahora deben trabajar juntos para completar una serie de acertijos y desafíos para poder volver a sus cuerpos humanos.",
         "stock": 10
     },
     {
         "id": 8,
         "title": "The Elder Scrolls V: Skyrim",
-        "genre": "Aventura",
+        "genre": "Rol",
         "platform": "PS4",
         "img": "https://i.ibb.co/FVmhDPY/product-008.webp",
         "price": 30000,
-        "description": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus.",
+        "description": "The Elder Scrolls V: Skyrim es un juego de rol de acción de mundo abierto en el que el jugador crea su propio personaje y explora el vasto mundo de Skyrim. El jugador puede completar misiones, luchar contra enemigos, unirse a gremios y explorar cuevas y mazmorras.",
         "stock": 10
     }
 ]

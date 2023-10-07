@@ -28,7 +28,7 @@ const FormularioSuscripcion = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Quiero recibir información sobre ofertas y promociones." {...register("validacion")} />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button className="mb-5" variant="primary" type="submit">
                     Suscribirme
                 </Button>
             </Form>
