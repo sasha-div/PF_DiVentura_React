@@ -8,16 +8,24 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../firebase/data';
+import Swal from 'sweetalert2';
 
 export const Checkout = () => {
 
     const [orderId, setOrderId] = useState("");
-
     const { carrito, totalCarrito, vaciarCarrito } = useContext(CartContext);
-
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, watch, formState: { errors, isValid } } = useForm();
 
     const comprar = (data) => {
+        if (data.email !== data.confirmarEmail) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Los correos que ingresaste no coinciden.',
+            });
+            return;
+        }
+
         const order = {
             cliente: data,
             productos: carrito,
@@ -32,6 +40,15 @@ export const Checkout = () => {
                 setOrderId(doc.id);
                 vaciarCarrito();
             })
+            .catch((error) => {
+                console.error('Error al procesar la orden:', error);
+
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Hubo un problema al procesar tu compra. Por favor, inténtalo nuevamente.',
+                });
+            });
     }
 
     if (orderId) {
@@ -51,34 +68,47 @@ export const Checkout = () => {
                     <Row className="mb-3">
                         <Form.Group as={Col}>
                             <Form.Label>Nombre</Form.Label>
-                            <Form.Control type="text" placeholder="Nombre" {...register("nombre")} />
+                            <Form.Control type="text" placeholder="Nombre" {...register("nombre", { required: true })} />
                         </Form.Group>
 
                         <Form.Group as={Col}>
                             <Form.Label>Apellido</Form.Label>
-                            <Form.Control type="text" placeholder="Apellido" {...register("apellido")} />
+                            <Form.Control type="text" placeholder="Apellido" {...register("apellido", { required: true })} />
                         </Form.Group>
                     </Row>
 
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Ingresa tu email</Form.Label>
-                        <Form.Control type="email" placeholder="Ingresa tu Email" {...register("email")} />
+                        <Form.Control type="email" placeholder="Ingresa tu Email" {...register("email", { required: true })} />
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="formGridConfirmEmail">
+                        <Form.Label>Confirma tu email</Form.Label>
+                        <Form.Control type="email" placeholder="Confirma tu Email" {...register("confirmarEmail", { required: true }, {
+                            validate: (value) => value === watch('email') || 'Los correos electrónicos no coinciden',
+                        })}
+                        />
+                        {errors.confirmarEmail && (
+                            <Form.Text className="text-danger">
+                                {errors.confirmarEmail.message}
+                            </Form.Text>
+                        )}
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formGridAddress2">
                         <Form.Label>Dirección</Form.Label>
-                        <Form.Control placeholder="Calle, casa, depto, piso" {...register("direccion")} />
+                        <Form.Control placeholder="Calle, casa, depto, piso" {...register("direccion", { required: true })} />
                     </Form.Group>
 
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formGridCity">
                             <Form.Label>Ciudad</Form.Label>
-                            <Form.Control {...register("ciudad")} />
+                            <Form.Control {...register("ciudad", { required: true })} />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridState">
                             <Form.Label>Región</Form.Label>
-                            <Form.Select defaultValue="Choose..." {...register("region")} >
+                            <Form.Select defaultValue="Choose..." {...register("region", { required: true })} >
                                 <option>Elige...</option>
                                 <option>RM</option>
                                 <option>Bio Bio</option>
@@ -87,7 +117,7 @@ export const Checkout = () => {
 
                     </Row>
 
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" disabled={!isValid}>
                         Realizar compra
                     </Button>
                 </Form>
