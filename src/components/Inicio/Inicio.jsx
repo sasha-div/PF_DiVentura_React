@@ -1,7 +1,6 @@
 import { Container } from "react-bootstrap";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import MasVendidos from "../MasVendidos/MasVendidos";
 import Destacados from "../Destacados/Destacados";
 
 const Inicio = () => {
@@ -15,7 +14,6 @@ const Inicio = () => {
                 </Row>
             </Container>
             <Destacados />
-            <MasVendidos />
             <img src="https://i.ibb.co/Pwy2v2K/Black-Blue-Simple-Gaming-Banner-Landscape.webp" alt="banner genérico foot" width="100%" />
         </div>
     )
