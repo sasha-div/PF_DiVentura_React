@@ -9,7 +9,6 @@ export const CartProvider = ({ children }) => {
 
     const agregarAlCarrito = (product, quantity) => {
         const productAgregado = { ...product, quantity }
-
         const nuevoCarrito = [...carrito];
         const enElCarrito = nuevoCarrito.find((product) => product.id === productAgregado.id);
 

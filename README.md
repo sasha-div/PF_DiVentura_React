@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Introducción
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+¡Hola! Gracias por revisar este proyecto.
 
-## Available Scripts
+## Descripción del proyecto
 
-In the project directory, you can run:
+La intención de este proyecto es emular un proceso de compra a través de un e-commerce especializado en la venta de videojuegos.
 
-### `npm start`
+## Dependencia utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Estas fueron las dependencias usadas por npm, a parte de las que trabajamos en clase (firebase, react-router, etc.):
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### React Bootstrapp
 
-### `npm test`
+Para manejar los estilos del sitio web.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Versión: ^2.8.0
 
-### `npm run build`
+npm i react-bootstrap 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Sweetalert2
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para mejorar la visualización algunos errores.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Versión: ^11.7.32
 
-### `npm run eject`
+npm i sweetalert2
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Toastify
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para notificar el ingreso de un producto al carrito.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Versión: ^9.1.3
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install react-toastify
 
-## Learn More
+## Instalación
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clona este repositorio.
+   ```bash
+   git clone https://github.com/sasha-div/PF_DiVentura_React.git
 
-### Code Splitting
+2. Entra al directorio del proyecto.
+   ```bash
+   cd PF_DiVentura_React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Instala las dependencias 
+   ```bash
+   npm install
 
-### Analyzing the Bundle Size
+4. Inicia la aplicación
+   ```bash
+   npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
