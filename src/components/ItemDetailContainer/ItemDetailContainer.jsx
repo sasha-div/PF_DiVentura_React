@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
                 console.error("Error al obtener el producto:", error);
                 setLoading(false);
             });
-    }, [id]);
+    }, [id, navigate]);
 
     return (
         <Container className='my-5 d-flex justify-content-center mt-5'>
