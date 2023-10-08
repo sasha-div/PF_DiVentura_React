@@ -13,7 +13,6 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-
         const productsRef = collection(db, "products");
 
         const q = platform ? query(productsRef, where("platform", "==", platform)) : productsRef;
