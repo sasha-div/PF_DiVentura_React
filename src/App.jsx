@@ -9,6 +9,8 @@ import Footer from './components/Footer/Footer';
 import { CartProvider } from './context/CartContext';
 import { Carrito } from './components/Carrito/Carrito';
 import { Checkout } from './components/Checkout/Checkout';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -17,6 +19,7 @@ function App() {
 
       <BrowserRouter>
         <NavBar />
+        <ToastContainer />
 
         <Routes>
           <Route path='/' element={<Inicio />} />
